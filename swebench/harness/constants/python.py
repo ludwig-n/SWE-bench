@@ -943,6 +943,13 @@ MAP_REPO_TO_REQS_PATHS = {
     "pyvista/pyvista": ["requirements_test.txt", "requirements.txt"],
     "sqlfluff/sqlfluff": ["requirements_dev.txt"],
     "sympy/sympy": ["requirements-dev.txt", "requirements-test.txt"],
+
+    # SWE-Gym repos below
+    # Copied from https://github.com/SWE-Gym/SWE-Bench-Fork/blob/242429c188fcfd06aad13fce9a54d450470bf0ac/swebench/harness/constants.py
+
+    "Project-MONAI/MONAI": ["requirements-dev.txt"],
+    "HypothesisWorks/hypothesis": ["requirements/tools.txt"],
+    "facebookresearch/hydra": ['requirements/dev.txt']
 }
 
 
@@ -950,6 +957,32 @@ MAP_REPO_TO_REQS_PATHS = {
 MAP_REPO_TO_ENV_YML_PATHS = {
     "matplotlib/matplotlib": ["environment.yml"],
     "pydata/xarray": ["ci/requirements/environment.yml", "environment.yml"],
+
+    # SWE-Gym repos below
+    # Copied from https://github.com/SWE-Gym/SWE-Bench-Fork/blob/242429c188fcfd06aad13fce9a54d450470bf0ac/swebench/harness/constants.py
+
+    "bokeh/bokeh": [
+        # for v3
+        "conda/environment-test-3.10.yml",
+        #for v2
+        "environment.yml"
+        # for v1
+        ],
+    "modin-project/modin": [
+        "environment-dev.yml"
+        ],
+    "dask/dask": [
+        "continuous_integration/environment-3.10.yaml",
+        "continuous_integration/environment-3.9.yaml",
+        "continuous_integration/environment-3.8.yaml",
+        "continuous_integration/travis/travis-37.yaml"
+    ],
+    "spyder-ide/spyder": [
+        "requirements/main.yml",
+    ],
+    "pandas-dev/pandas": [
+        "environment.yml"
+    ]
 }
 
 USE_X86_PY = {
@@ -1452,7 +1485,7 @@ USE_X86_PY = {
 }
 
 
-# ----- SWE-Gym code begins here -----
+# --- SWE-Gym code below ---
 # Copied from https://github.com/SWE-Gym/SWE-Bench-Fork/blob/242429c188fcfd06aad13fce9a54d450470bf0ac/swebench/harness/constants.py
 
 
